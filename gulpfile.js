@@ -22,7 +22,7 @@ gulp.task('browser-sync', function () {
 	});
 });
 gulp.task('sass', function () {
-	return gulp.src(['resource/' + assetsDir + 'sass/**/*.scss'])
+	return gulp.src(['source/' + assetsDir + 'sass/**/*.scss'])
 		.pipe(plumber({
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
@@ -31,17 +31,17 @@ gulp.task('sass', function () {
 			browsers: ['last 2 versions', 'Android 3', 'ie 9']
 		}))
 		.pipe(csscomb())
-		.pipe(gulp.dest('resource/' + assetsDir + 'css/'))
+		.pipe(gulp.dest('source/' + assetsDir + 'css/'))
 });
 gulp.task('css', function () {
-	return gulp.src('resource/**/*.css')
+	return gulp.src('source/**/*.css')
 		.pipe(cache('css-cache'))
 		.pipe(gulp.dest(destDir))
 		.pipe(browserSync.stream())
 });
 gulp.task('jsmin', function () {
-	gulp.src(['resource/' + assetsDir + 'js/**/*.js',
-    '!resource/' + assetsDir + 'js/**/*.min.js'])
+	gulp.src(['source/' + assetsDir + 'js/**/*.js',
+    '!source/' + assetsDir + 'js/**/*.min.js'])
 		.pipe(plumber())
 		.pipe(changed(destDir + assetsDir + 'js/'))
 		.pipe(uglify({
@@ -50,34 +50,34 @@ gulp.task('jsmin', function () {
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(gulp.dest('resource/' + assetsDir + 'js/'))
+		.pipe(gulp.dest('source/' + assetsDir + 'js/'))
 });
 gulp.task('js', function () {
-	return gulp.src('resource/**/*.js')
+	return gulp.src('source/**/*.js')
 		.pipe(cache('js-cache'))
 		.pipe(gulp.dest(destDir))
 		.pipe(browserSync.stream())
 });
-gulp.task('copyResource', function () {
-	return gulp.src(['resource/**/*', '!resource/' + assetsDir + 'sass/', '!resource/' + assetsDir + 'sass/*.scss'])
-		.pipe(cache('resource-cache'))
+gulp.task('copysource', function () {
+	return gulp.src(['source/**/*', '!source/' + assetsDir + 'sass/', '!source/' + assetsDir + 'sass/*.scss'])
+		.pipe(cache('source-cache'))
 		.pipe(gulp.dest(destDir))
 		.pipe(browserSync.stream())
 });
-gulp.task('default', ['browser-sync', 'copyResource', 'sass', 'jsmin'], function () {
-	watch(['resource/**/*.+(jpg|jpeg|gif|png|html|php)'], function (event) {
-		gulp.start(['copyResource']);
+gulp.task('default', ['browser-sync', 'copysource', 'sass', 'jsmin'], function () {
+	watch(['source/**/*.+(jpg|jpeg|gif|png|html|php)'], function (event) {
+		gulp.start(['copysource']);
 	});
-	watch(['resource/**/*.scss'], function (event) {
+	watch(['source/**/*.scss'], function (event) {
 		gulp.start(['sass']);
 	});
-	watch(['resource/**/*.css'], function (event) {
+	watch(['source/**/*.css'], function (event) {
 		gulp.start(['css']);
 	});
-	watch(['resource/**/*.js'], function (event) {
+	watch(['source/**/*.js'], function (event) {
 		gulp.start(['jsmin']);
 	});
-	watch(['resource/**/*.min.js'], function (event) {
+	watch(['source/**/*.min.js'], function (event) {
 		gulp.start(['js']);
 	});
 });
