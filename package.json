@@ -1,0 +1,33 @@
+{
+  "name": "site_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torirepe/site_template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/torirepe/site_template/issues"
+  },
+  "homepage": "https://github.com/torirepe/site_template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-changed": "^2.0.0",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.6"
+  }
+}
