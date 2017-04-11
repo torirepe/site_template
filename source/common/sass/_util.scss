@@ -1,0 +1,35 @@
+//break point
+$break-tb: 425px;
+$break-pc: 768px;
+
+//color
+$c-white: #fff;
+$c-black: #000;
+
+//font
+$f-yugo: "メイリオ", "Yu Gothic", YuGothic, sans-serif;
+
+//tool
+@mixin cols($sp, $tb, $pc) {
+	font-size: 0;
+	letter-spacing: 0;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		@media only screen and (max-width: $break-tb) {
+			&:nth-child($sp n+1) {
+				margin-left: 0 !important;
+			}
+		}
+		@media only screen and (min-width: $break-tb) and (max-width: $break-pc) {
+			&:nth-child($tb n+1) {
+				margin-left: 0 !important;
+			}
+		}
+		@media only screen and (min-width: $break-pc) {
+			&:nth-child($sp n+1) {
+				margin-left: 0 !important;
+			}
+		}
+	}
+}

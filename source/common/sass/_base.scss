@@ -1,0 +1,32 @@
+/* global */
+* {
+	box-sizing: border-box;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling : touch;
+	-webkit-text-size-adjust: 100%;
+	font-family: $f-yugo;
+	word-break: break-all;
+	color: $c-black;
+}
+img {
+	width: 100%;
+}
+/* /global */
+
+/* wrapper */
+#wrapper {
+}
+/* /wrapper */
+
+/* header */
+#header {
+}
+/* /header */
+
+/* footer */
+#footer {
+}
+/* /footer */

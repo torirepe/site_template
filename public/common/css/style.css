@@ -1,0 +1,196 @@
+@charset 'UTF-8';
+body,
+div,
+pre,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+th,
+td,
+figure,
+figcaption
+{
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea
+{
+    font-size: 100%; 
+
+    margin: 0;
+}
+
+label
+{
+    cursor: pointer;
+}
+
+table
+{
+    font-size: 100%; 
+
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th,
+td
+{
+    list-style: none;
+}
+
+fieldset,
+img
+{
+    border: 0;
+}
+
+img
+{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: top;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var
+{
+    font-weight: normal; 
+    font-style: normal;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+caption,
+th
+{
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size: 100%;
+    font-weight: bold;
+}
+
+q:after,
+q:before
+{
+    content: '';
+}
+
+a,
+input
+{
+    color: inherit; 
+    outline: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+input,
+textarea
+{
+    border-radius: 0;
+}
+
+input[type='button'],
+input[type='submit']
+{
+    padding: 0;
+
+    cursor: pointer; 
+
+    border: none;
+    background: none;
+
+    -webkit-appearance: none;
+}
+
+abbr,
+acronym
+{
+    border: 0;
+}
+
+i
+{
+    font-style: normal;
+}
+
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+
+        -ms-box-sizing: border-box;
+}
+
+/* global */
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'メイリオ', 'Yu Gothic', YuGothic, sans-serif;
+
+    word-break: break-all;
+
+    color: #000; 
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+}
+
+img
+{
+    width: 100%;
+}
+
+/* /global */
+/* wrapper */
+/* /wrapper */
+/* header */
+/* /header */
+/* footer */
+/* /footer */
